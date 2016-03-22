@@ -407,6 +407,13 @@ public class TestMimeTypes {
         assertTypeByData("image/x-bpg", "testBPG_commented.bpg");
         assertTypeByName("image/x-bpg", "x.bpg");
     }
+	@Test
+    public void testIcnsDetection() throws Exception {
+        assertType("image/icns", "testICNS.icns");
+        assertTypeByData("image/icns", "testICNS_basic.icns");
+        assertTypeByData("image/icns", "testICNS.icns");
+        assertTypeByName("image/icns", "testICNS.icns");
+    }
     
     @Test
     public void testTiffDetection() throws Exception {
